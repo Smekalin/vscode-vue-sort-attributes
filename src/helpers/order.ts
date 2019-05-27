@@ -1,8 +1,8 @@
 export const PRIORITY_OTHER = 15;
 
 export const order: { [s: string]: number } = {
-  is: 0,
-  ":is": 0,
+  "is=": 0,
+  ":is=": 0,
   "v-for": 1,
   "v-if": 2,
   "v-else-if": 3,
