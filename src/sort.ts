@@ -1,4 +1,6 @@
 import * as vscode from "vscode";
+import { sortAlgorithm } from "./helpers/algorithm";
+import { removeBlanks, insertBracket } from "./helpers/editing";
 
 export default function sortActiveSelection(
   removeDuplicateValues: boolean
@@ -26,6 +28,7 @@ function sortLines(
 
   lines.sort(sortAlgorithm);
   removeBlanks(lines);
+  insertBracket(lines);
 
   return textEditor.edit(editBuilder => {
     const range = new vscode.Range(
@@ -36,19 +39,4 @@ function sortLines(
     );
     editBuilder.replace(range, lines.join("\n"));
   });
-}
-
-function removeBlanks(lines: string[]): void {
-  for (let i = 0; i < lines.length; ++i) {
-    if (lines[i].trim() === "") {
-      lines.splice(i, 1);
-      i--;
-    }
-  }
-}
-
-function sortAlgorithm(a: string, b: string): number {
-  if (a > b) return 1;
-  if (a < b) return -1;
-  return 0;
 }
