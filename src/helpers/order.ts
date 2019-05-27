@@ -1,5 +1,4 @@
-export const PRIORITY_OTHER = 14;
-export const PRIORITY_V_ON = 15;
+export const PRIORITY_OTHER = 15;
 
 export const order: { [s: string]: number } = {
   is: 0,
@@ -17,9 +16,10 @@ export const order: { [s: string]: number } = {
   key: 11,
   slot: 12,
   "v-model": 13,
-  other: PRIORITY_OTHER, // other attributes, v-bind, :
-  "v-on": PRIORITY_V_ON,
-  "@": PRIORITY_V_ON, // @
-  "v-html": 16,
-  "v-text": 17
+  "v-bind": 14,
+  other: PRIORITY_OTHER, // other attributes and ":"
+  "v-on": 16,
+  "@": 17,
+  "v-html": 18,
+  "v-text": 19
 };

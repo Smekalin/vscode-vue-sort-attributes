@@ -1,26 +1,23 @@
-import { order, PRIORITY_OTHER, PRIORITY_V_ON } from "./order";
-
-// как определить?
-// v-bind -> :
-// v-on -> @
+import { order, PRIORITY_OTHER } from "./order";
 
 /*
-
 Алгоритм:
-1. Определяем тип узла a
-2. Определяем тип узла b
-3. Если узел из orders, то берем приоритет из orders
-4. Если узел не из orders, то если есть @ -> приоритет v-on
-6. Если просто строка, то приоритет other
-7. Для узла b повторяем 3-6
-8. Если оба из other, то сравниваем просто строки
-9. Иначе возвращаем сравнение приоритетов
++ 1. Определяем тип узла a
++ 2. Определяем тип узла b
+3. Если приоритеты равны - сравниваем как строки
+4. Если не равны - просто численное сравнение
 */
 export function sortAlgorithm(a: string, b: string): number {
-  console.log("!!a:", a, getPriority(a));
-  console.log("!!b:", b, getPriority(b));
-  if (order[a] && order[b]) if (a > b) return 1;
-  if (a < b) return -1;
+  const priorityA = getPriority(a);
+  const priorityB = getPriority(b);
+
+  if (priorityA === priorityB) {
+    return a > b ? 1 : a < b ? -1 : 0;
+  }
+  if (priorityA !== priorityB) {
+    return priorityA > priorityB ? 1 : priorityA < priorityB ? -1 : 0;
+  }
+
   return 0;
 }
 
