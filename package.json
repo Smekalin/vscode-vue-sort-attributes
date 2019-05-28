@@ -5,8 +5,8 @@
   "publisher": "Smekalin",
   "license": "MIT",
   "name": "vue-attr-sort",
-  "displayName": "vue-attr-sort",
-  "description": "Sorting Vue attributes",
+  "displayName": "Vue sort attributes",
+  "description": "Sort multiline attributes",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.34.0"
