@@ -24,7 +24,7 @@ export function sortAlgorithm(a: string, b: string): number {
 function getPriority(str: string): number {
   for (let key in order) {
     const reg = new RegExp(`^${key}`, "i");
-    if (reg.test(str)) return order[key];
+    if (reg.test(str.trim())) return order[key];
   }
   return PRIORITY_OTHER;
 }

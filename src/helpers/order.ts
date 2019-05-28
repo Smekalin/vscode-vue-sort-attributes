@@ -12,9 +12,13 @@ export const order: { [s: string]: number } = {
   "v-pre": 7,
   "v-once": 8,
   id: 9,
+  ":id=": 9,
   ref: 10,
+  ":ref=": 10,
   key: 11,
+  ":key=": 11,
   slot: 12,
+  ":slot=": 12,
   "v-model": 13,
   "v-bind": 14,
   other: PRIORITY_OTHER, // other attributes and ":"
