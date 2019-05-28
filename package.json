@@ -1,10 +1,19 @@
 {
+  "author": {
+    "name": "Sergey Smekalin"
+  },
+  "publisher": "Smekalin",
+  "license": "MIT",
   "name": "vue-attr-sort",
   "displayName": "vue-attr-sort",
   "description": "Sorting Vue attributes",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.34.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Smekalin/Vue-Sort-Attributes"
   },
   "categories": [
     "Other"
@@ -17,7 +26,7 @@
     "commands": [
       {
         "command": "VueAttrSort.sort",
-        "title": "Sort Vue attributes"
+        "title": "Sorting of Vue only multiline attributes in template"
       }
     ]
   },
@@ -34,5 +43,6 @@
     "tslint": "^5.12.1",
     "@types/node": "^10.12.21",
     "@types/mocha": "^2.2.42"
-  }
+  },
+  "icon": "images/icon.png"
 }
