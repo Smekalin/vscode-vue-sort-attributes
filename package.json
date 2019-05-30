@@ -7,7 +7,7 @@
   "name": "vue-attr-sort",
   "displayName": "Vue sort attributes",
   "description": "Sort multiline attributes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.34.0"
   },
@@ -27,6 +27,14 @@
       {
         "command": "VueAttrSort.sort",
         "title": "Vue sort attributes"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "VueAttrSort.sort",
+        "key": "ctrl+k ctrl+k",
+        "mac": "cmd+k cmd+k",
+        "when": "editorTextFocus"
       }
     ]
   },
